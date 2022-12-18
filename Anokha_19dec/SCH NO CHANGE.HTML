@@ -1,0 +1,309 @@
+<!-- event schedule-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<style>
+
+		/* Styling the body */
+		body {
+			margin: 0;
+			padding: 0;
+                 background-image: url("LOGO.PNG");
+			background-size: cover;
+		}
+		
+		/* Styling section, giving background
+			image and dimensions */
+		section {
+			width: 100%;
+			height: 100vh;
+			
+		}
+		
+		/* Styling the left floating section */
+		section .leftBox {
+			width: 50%;
+			height: 100%;
+			float: left;
+			padding: 50px;
+			box-sizing: border-box;
+		}
+		
+		/* Styling the background of
+			left floating section */
+		section .leftBox .content {
+			color: black;
+			background:#edf4ec;
+			padding: 40px;
+			transition: .5s;
+		}
+		
+		/* Styling the hover effect
+			of left floating section */
+		section .leftBox .content:hover {
+			background: #ffe5ec;
+		}
+		
+		/* Styling the header of left
+			floating section */
+		section .leftBox .content h1 {
+			margin: 0;
+			padding: 0;
+			font-size: 50px;
+			text-transform: uppercase;
+		}
+		
+		/* Styling the paragraph of
+			left floating section */
+		section .leftBox .content p {
+			margin: 10px 0 0;
+			padding: 0;
+		}
+		
+		/* Styling the three events section */
+		section .events {
+			position: relative;
+			width: 50%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.5);
+			float: right;
+			box-sizing: border-box;
+		}
+		
+		/* Styling the links of
+		the events section */
+		section .events ul {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			margin: 0;
+			padding: 40px;
+			box-sizing: border-box;
+		}
+		
+		/* Styling the lists of the event section */
+		section .events ul li {
+			list-style: none;
+			background: black;
+			box-sizing: border-box;
+			height: 200px;
+			margin: 15px 0;
+		}
+		
+		/* Styling the time class of events section */
+		section .events ul li .time {
+			position: relative;
+			padding: 20px;
+			background: #e7ffff;
+			box-sizing: border-box;
+			width: 30%;
+			height: 100%;
+			float: left;
+			text-align: center;
+			transition: .5s;
+		}
+		
+		/* Styling the hover effect
+			of events section */
+		section .events ul li:hover .time {
+			background: #ffe5ec;
+		}
+		
+		/* Styling the header of time
+			class of events section */
+		section .events ul li .time h2 {
+			position: absolute;
+			margin: 0;
+			padding: 0;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: black;
+			font-size: 60px;
+			line-height: 30px;
+		}
+		
+		/* Styling the texts of time
+		class of events section */
+		section .events ul li .time h2 span {
+			font-size: 30px;
+		}
+		
+		/* Styling the details
+		class of events section */
+		section .events ul li .details {
+			padding: 20px;
+			background: white;
+			box-sizing: border-box;
+			width: 70%;
+			height: 100%;
+			float: left;
+		}
+		
+		/* Styling the header of the
+		details class of events section */
+		section .events ul li .details h3 {
+			position: relative;
+			margin: 0;
+			padding: 0;
+			font-size: 22px;
+		}
+		
+		/* Styling the lists of details
+		class of events section */
+		section .events ul li .details p {
+			position: relative;
+			margin: 10px 0 0;
+			padding: 0;
+			font-size: 16px;
+		}
+		
+		/* Styling the links of details
+		class of events section */
+		section .events ul li .details a {
+			display: inline-block;
+			text-decoration: none;
+			padding: 10px 15px;
+			border: 1.5px solid #ffe5ec;
+			margin-top: 8px;
+			font-size: 18px;
+			transition: .5s;
+		}
+		
+		/* Styling the details class's hover effect */
+		section .events ul li .details a:hover {
+			background: #ffe5ec;
+			color: black;
+			border-color: #ffe5ec;
+		}
+.navbar{ overflow: hidden;
+        float: none;
+        margin: 20px;
+      }
+      .navbar ul{
+        list-style: none;
+
+      }
+      .navbar li a{
+        float:right;
+        color:black;
+        background:#edf4ec;
+        text-align: center;
+        font-style: none;
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        text-decoration: none;
+        padding: 5px;
+       
+        
+      }
+      .navbar a:hover{
+        color:#f02262;
+    
+    }
+  .button {
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: BLACK;
+        background-color: #edf4ec;
+        border-radius: 6px;
+        outline: none;
+      }
+    </style>
+<div>
+        <nav class="navbar">
+            <ul class="logo">
+              <li><a href="./gallery.html" style="padding-left: 25px">Gallery - previous years</a></li>
+              <li><a href="./contact.html" style="padding-left: 25px">Contact</a></li>
+              <li><a href="../index.html">Home</a></li>
+              
+              <li style="float:left;"><a href="#" style="font-size: xx-large ; margin-left: 10px;">ANOKHA</a></li>
+            </ul>
+    </nav>
+    </div>
+	</style>
+</head>
+
+<body>
+	<section>
+		<div class="leftBox">
+			<div class="content">
+				<h1>
+					Events and Shows
+				</h1>
+				
+<p>
+					“Anokha Techfest, the annual event of Amrita School of Engineering, Coimbatore provides an unique opportunity for students to participate in fun-filled and challenging events and workshops. The event throws open opportunities for students from all disciplines to challenge themselves and foster the “Can Do” attitude. One of the key highlights of the Anokha 2020 edition was the Green Anokha concept. It was so wonderful to see the students adopt and implement our Chancellor AMMA’s idea of “Living in Harmony with Nature”. It was plastic-free and eco-friendly Anokha – an initiative that will become a tradition!!”, Dr. Sasangan Ramanathan, Dean, Faculty of Engineering, Amrita Vishwa Vidyapeetham."
+				</p>
+
+			</div>
+		</div>
+
+		<div class="events">
+			<ul>
+				<li>
+					<div class="time">
+						<h2>
+							15 <br><span>February</span>
+						</h2>
+					</div>
+					<div class="details">
+						<h3>
+							Tech events
+						</h3>
+						
+<p>
+							Each department will have different types of events organized.
+						</p>
+
+
+						<a href="#">View Details</a>
+					</div>
+					<div style="clear: both;"></div>
+				</li>
+
+				<li>
+					<div class="time">
+						<h2>
+							16 <br><span>February</span>
+						</h2>
+					</div>
+					<div class="details">
+						<h3>
+							Cultural event, cycle rally
+						</h3>
+						
+
+						<a href="#">View Details</a>
+					</div>
+					<div style="clear:both;"></div>
+				</li>
+
+				<li>
+					<div class="time">
+						<h2>
+							17 <br><span>February</span>
+						</h2>
+					</div>
+					<div class="details">
+						<h3>
+							Last day celabration with prizes distributed to the winners
+						</h3>
+						
+
+
+						<a href="#">View Details</a>
+					</div>
+					<div style="clear:both;"></div>
+				</li>
+			</ul>
+		</div>
+	</section>
+</body>
+
+</html>
+
+
