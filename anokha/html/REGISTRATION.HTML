@@ -1,0 +1,199 @@
+<!--MINE- REGISTRATION -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+  font-family: Calibri, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("LOGO.PNG");
+  background-size: contain;}
+}
+.container {
+    padding: 50px;
+}
+
+input[type=text], input[type=password], textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #F5E1E1;
+  outline: none;
+}
+ div {
+            padding: 10px 0;
+         }
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.registerbtn:hover {
+  opacity: 1;
+}
+.navbar{ overflow: hidden;
+        float: none;
+        margin: 20px;
+      }
+      .navbar ul{
+        list-style: none;
+
+      }
+      .navbar li a{
+        float:right;
+        color:black;
+        background:#edf4ec;
+        text-align: center;
+        font-style: none;
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        text-decoration: none;
+        padding: 5px;
+       
+        
+      }
+      .navbar a:hover{
+        color:#f02262;
+    
+    }
+  .button {
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: BLACK;
+        background-color: #edf4ec;
+        border-radius: 6px;
+        outline: none;
+      }
+    </style>
+<div>
+        <nav class="navbar">
+            <ul class="logo">
+              <li><a href="./gallery.html" style="padding-left: 25px">Gallery - previous years</a></li>
+              <li><a href="./contact.html" style="padding-left: 25px">Contact</a></li>
+              <li><a href="../index.html">Home</a></li>
+              
+              <li style="float:left;"><a href="#" style="font-size: xx-large ; margin-left: 10px;">ANOKHA</a></li>
+            </ul>
+    </nav>
+    </div> </head>
+<body>
+<form>
+  <div class="container">
+  <center>  <h1> ANOKHA - 2023 Student Registration Form</h1> </center>
+  <hr>
+  <label> Full Name </label> 
+<input type="text" name="Full Name" placeholder= "Full Name" size="15" required /> 
+<label> College Name: </label>       
+<input type="text" name="collegename"> <br> <br>
+<div>
+<label> 
+Course :
+</label> 
+
+<select>
+<option value="Course">Course</option>
+<option value="B.TECH">BTECH 1ST YR</option>
+<option value="B.TECH">BTECH 2ND YR</option>
+<option value="B.TECH">BTech 3RD YR</option>
+<option value="B.TECH">BTECH 4RTH YR</option>
+<option value="FACULTIES">FACULTIES</option>
+<option value="OTHERS">OTHERS</option>
+<option value="M.Tech">M.Tech</option>
+</select>
+</div>
+<div>
+<label> 
+Gender :
+</label><br>
+<input type="radio" value="Male" name="gender" checked > Male 
+<input type="radio" value="Female" name="gender"> Female 
+<input type="radio" value="Other" name="gender"> Other
+
+</div>
+<label> 
+Phone :
+</label>
+<input type="text" name="country code" placeholder="Country Code"  value="+91" size="2"/> 
+<input type="text" name="phone" placeholder="phone no." size="10"/ required> 
+Current Address :
+<textarea cols="80" rows="5" placeholder="Current Address" value="address" required></textarea>
+<label for="email"><b>Email</b></label>  
+ <input type="text" placeholder="Enter Email" name="email" required> 
+<label>ID Proof</label> </br> </br>
+<input type="file" id="proof" name="filename" required=""> </br> </br>
+  
+    <label for="psw"><b>Password</b></label>  
+    <input type="password" placeholder="Enter Password" name="psw" required>  
+  
+    <label for="psw-repeat"><b>Re-type Password</b></label>  
+    <input type="password" placeholder="Retype Password" name="psw-repeat" required>  
+    <input type="submit" class="registerbtn" onclick ="validate()"> 
+</form>  
+<script>
+function validate() 
+{
+	var name = document.getElementById("Full Name").value;
+if(name == null || name == " "){
+window.alert("blank space-- Enter a name");
+}
+	var collegename = document.getElementById("collegename").value;
+if(collegename.length<10){
+window.alert("less than 10-- Enter a College Name");
+}
+     let phone = document.getElementById("phone").value;
+      if(!(phone.length==10)){
+window.alert("Enter a valid phoneno");
+}
+ 
+let pwd = document.getElementById("psw").value;
+var pass= "(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}";
+
+if(!pwd.match(pass))
+{
+window.alert("Enter a strong password");
+}
+
+    var maill = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var mail = document.getElementById("email").value;
+    if (!mail.match(maill)) 
+{
+        alert("Enter a valid email address");
+    }
+    var psw2 = document.getElementById("psw-repeat").value;
+    var pwd = document.getElementById("psw").value;
+    if (!psw2.match(pwd)) {
+window.alert("Enter the same password in the retype password section");
+}
+var uploadField = document.getElementById("proof");
+ 
+    if(this.files[0].size > 2097152){
+       alert("File is too big!");
+       this.value = "";
+    }
+
+}	
+</script>
+</body>  
+
+</html>
